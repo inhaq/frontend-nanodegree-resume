@@ -18,17 +18,21 @@ var bio = {
 };
 
 var education={
- "schools": array of objects with
-         "name": string
-         "location": string
-         "degree": string
-         "majors": array of strings
-         "dates": string (works with a hyphen between them)
-         "url": string
-    "onlineCourses": array of objects with
-         "title": string
-         "school": string
-         "dates": string (works with a hyphen between them)
-         "url": string
-    "display": function taking no parameters
+ "schools": { 
+        "name": "string",
+         "location": "string",
+         "degree": "string",
+         "majors": "array of strings",
+         "dates": "string (works with a hyphen between them)",
+         "url": "string"
+        },
+        
+    "onlineCourses": {
+        "title": "string",
+         "school": "string",
+         "dates": "string (works with a hyphen between them)",
+         "url": "string"
+        }
+         
+    // "display": function taking no parameters
 };
