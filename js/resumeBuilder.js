@@ -36,3 +36,26 @@ var education={
          
     // "display": function taking no parameters
 };
+
+var work={
+    jobs: {
+         "employer": "string", 
+         "title": "string", 
+         "location": "string", 
+         "dates": "string (Can be 'in progress')",
+         "description": "string" 
+    },
+         
+    // display: function taking no parameters
+};
+
+var projects={
+          projects: {
+          "title": "string", 
+          "dates": "string (works with a hyphen between them)",
+          "description": "string",
+          "images": "array with string urls"
+          },
+          
+    // display: function taking no parameters
+};
