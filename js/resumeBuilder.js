@@ -5,10 +5,10 @@ var bio = {
     "name": "Inzimam Ul Haq",
     "role": "Front-End Web Developer",
     "contacts": {
-        "mobile": "+923466374133",
+        "mobile": "+92-346-6374133",
         "email": "hi@inzi.me",
         "github": "@inhaq",
-        "facebook": "enzimam",
+        "twitter": "inzi_me",
         "location": "Pakistan"
     },
     "welcomeMessage": "Hi, I'm Inzimam",
@@ -16,8 +16,41 @@ var bio = {
         "JavaScript", "HTML5", "CSS3", "JQuery", "Git"
     ],
     "biopic": "images/fry.jpg",
-    // "display": function taking no parameters
+    "display": function () {
+        // console.log("bio display works!!");
+        var role = HTMLheaderRole.replace("%data%", bio.role);
+        $('#header').prepend(role);
+        var name = HTMLheaderName.replace("%data%", bio.name);
+        $('#header').prepend(name);
+        var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        $('#topContacts').append(mobile);
+        $('#footerContacts').append(mobile);
+        var email = HTMLemail.replace("%data%", bio.contacts.email);
+        $('#topContacts').append(email);
+        $('#footerContacts').append(email);
+        var twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        $('#topContacts').append(twitter);
+        $('#footerContacts').append(twitter);
+        var github = HTMLgithub.replace("%data%", bio.contacts.github);
+        $('#topContacts').append(github);
+        $('#footerContacts').append(github);
+        var mylocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        $('#topContacts').append(mylocation);
+        $('#footerContacts').append(mylocation);
+        var picture = HTMLbioPic.replace("%data%", bio.biopic);
+        $('#header').append(picture);
+        var welcomemsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        $('#header').append(welcomemsg);
+        $('#header').append(HTMLskillsStart);
+        for (var i = 0; i < bio.skills.length; i++) {
+            var skill = HTMLskills.replace("%data%", bio.skills[i]);
+            $('#skills').append(skill);
+        }
+
+    }
 };
+
+bio.display();
 
 var education = {
     "schools": [
@@ -55,8 +88,13 @@ var education = {
         }
     ],
 
-    // "display": function taking no parameters
+    "display": function () {
+        // body
+        console.log("education display works!!");
+    }
 };
+
+education.display();
 
 var work = {
     "jobs": [
@@ -75,16 +113,39 @@ var work = {
         }
     ],
 
-    // display: function taking no parameters
+    display: function () {
+        // body
+        console.log("work display works!!");
+    }
 };
+
+work.display();
 
 var projects = {
-    "projects": {
-        "title": "Visualization of Air Pollution",
-        "dates": "Dec 2015 - Dec 2016",
-        "description": "Designed a Web Application that visualize the data of the pollution that is Carbon mono-oxide, Smoke, Dust and Noise. For this project we also built a device of Arduino and GPS with required sensors. Data was displayed in Google Maps via Google Map API",
-        "images": "197x148.gif"
-    },
+    "projects": [
+        {
+            "title": "Visualization of Air Pollution",
+            "dates": "Dec 2015 - Dec 2016",
+            "description": "Designed a Web Application that visualize the data of the pollution that is Carb" +
+                    "on mono-oxide, Smoke, Dust and Noise. For this project we also built a device of" +
+                    " Arduino and GPS with required sensors. Data was displayed in Google Maps via Go" +
+                    "ogle Map API",
+            "images": "197x148.gif"
+        }, {
+            "title": "Visualization of Air Pollution",
+            "dates": "Dec 2015 - Dec 2016",
+            "description": "Designed a Web Application that visualize the data of the pollution that is Carb" +
+                    "on mono-oxide, Smoke, Dust and Noise. For this project we also built a device of" +
+                    " Arduino and GPS with required sensors. Data was displayed in Google Maps via Go" +
+                    "ogle Map API",
+            "images": "197x148.gif"
+        }
+    ],
 
-    // display: function taking no parameters
+    display: function () {
+        // body
+        console.log("project display works!!");
+    }
 };
+
+projects.display();
