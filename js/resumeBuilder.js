@@ -9,7 +9,7 @@ var bio = {
         "email": "hi@inzi.me",
         "github": "@inhaq",
         "twitter": "inzi_me",
-        "location": "Pakistan"
+        "location": "Tarbela, Pakistan"
     },
     "welcomeMessage": "Hi, I'm Inzimam",
     "skills": [
@@ -63,13 +63,13 @@ var work = {
         {
             "employer": "CreativeXLab",
             "title": "Front-End Web Developer",
-            "location": "Pakistan",
+            "location": "Peshawar, Pakistan",
             "dates": "May 2016 - Present",
             "description": "Collaborated with team for several projects such as Learning Management System and Hotel Mangement System etc."
         }, {
             "employer": "Self-Employed",
             "title": "Web Developer",
-            "location": "Pakistan",
+            "location": "Tarbela, Pakistan",
             "dates": "April 2015 - Present",
             "description": "Worked for several clients which includes customization of WordPress sites according to the client preferences, tackling security issues, increasing site performance and SEO. "
         }
@@ -133,14 +133,14 @@ var education = {
     "schools": [
         {
             "name": "FAST-NUCES",
-            "location": "Pakistan",
+            "location": "Peshawar, Pakistan",
             "degree": "BS-CS",
             "majors": "Computer Science",
             "dates": "2012 - 2016",
             "url": "http://www.nu.edu.pk/"
         }, {
             "name": "GIKI",
-            "location": "Pakistan",
+            "location": "Topi, Pakistan",
             "degree": "Pre-Engineering",
             "majors": "HSSC",
             "dates": "2010 - 2012",
@@ -189,5 +189,4 @@ var education = {
         }
     }
 };
-
-education.display();
+    $("#mapDiv").append(googleMap);
