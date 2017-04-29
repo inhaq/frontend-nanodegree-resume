@@ -23,7 +23,7 @@ var bio = {
     ],
     "biopic": "images/fry.jpg",
     "display": function () {
-        // console.log("bio display works!!");
+        
         var role = HTMLheaderRole.replace("%data%", bio.role);
         $("#header").prepend(role);
         var name = HTMLheaderName.replace("%data%", bio.name);
@@ -76,7 +76,7 @@ var work = {
     ],
 
     display: function () {
-        // body console.log("work display works!!");
+        
         $('#workExperience').append(HTMLworkStart);
         for (var i = 0; i < work.jobs.length; i++) {
             var workEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
@@ -162,7 +162,7 @@ var education = {
     ],
 
     "display": function () {
-        // body console.log("education display works!!");
+        
         $("#education").append(HTMLschoolStart);
         for (var i = 0; i < education.schools.length; i++) {
             var schoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
