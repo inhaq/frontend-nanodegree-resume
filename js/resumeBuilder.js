@@ -175,8 +175,6 @@ var education = {
             $(".education-entry").append(schoolLocation);
             var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
             $(".education-entry").append(schoolMajor);
-            var schoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
-            $(".education-entry").append(schoolDates);
         }
         $(".education-entry").append(HTMLonlineClasses);
         for (var i = 0; i < education.onlineCourses.length; i++) {
