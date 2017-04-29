@@ -101,12 +101,12 @@ var projects = {
             "title": "Visualization of Air Pollution",
             "dates": "Dec 2015 - Dec 2016",
             "description": "Designed a Web Application(BS-CS FYP) that visualize the data of the pollution that is Carbon mono-oxide, Smoke, Dust and Noise. For this project we also built a device of Arduino and GPS with required sensors. Data was displayed in Google Maps via Google Map API. We were two friends in group.",
-            "images": "images/197x148.gif"
+            "images": ["images/197x148.gif"]
         }, {
             "title": "Library Management System",
             "dates": "Sep 2015 - Dec 2015",
             "description": "Developed a Web App for University's Library as a semester Project. We were 8 members in team.",
-            "images": "images/197x148.gif"
+            "images": ["images/197x148.gif"]
         }
     ],
 
@@ -120,10 +120,12 @@ var projects = {
             $(".project-entry").append(projectDates);
             var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
             $(".project-entry").append(projectDescription);
-            var projectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
-            $(".project-entry").append(projectImage);
+           for (var j = 0; j < projects.projects[i].images.length; j++) {
+                var projectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
+                $(".project-entry").append(projectImage);
+            } 
         }
-
+        
     }
 };
 
@@ -135,13 +137,13 @@ var education = {
             "name": "FAST-NUCES",
             "location": "Peshawar, Pakistan",
             "degree": "BS-CS",
-            "majors": "Computer Science",
+            "majors": ["Computer Science"],
             "dates": "2012 - 2016",
             "url": "http://www.nu.edu.pk/"
         }, {
             "name": "GIKI",
             "location": "Topi, Pakistan",
-            "degree": "Pre-Engineering",
+            "degree": ["Pre-Engineering"],
             "majors": "HSSC",
             "dates": "2010 - 2012",
             "url": "http://www.giki.edu.pk/"
@@ -173,8 +175,10 @@ var education = {
             $(".education-entry").append(schoolDates);
             var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
             $(".education-entry").append(schoolLocation);
-            var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
-            $(".education-entry").append(schoolMajor);
+            for (var j = 0; j < education.schools[i].majors.length; j++) {
+                var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]);
+                $(".education-entry").append(schoolMajor);
+            }
         }
         $(".education-entry").append(HTMLonlineClasses);
         for (var i = 0; i < education.onlineCourses.length; i++) {
