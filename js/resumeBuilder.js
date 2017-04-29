@@ -143,7 +143,7 @@ var education = {
         }, {
             "name": "GIKI",
             "location": "Topi, Pakistan",
-            "degree": ["Pre-Engineering"],
+            "degree": "Pre-Engineering",
             "majors": ["HSSC"],
             "dates": "2010 - 2012",
             "url": "http://www.giki.edu.pk/"
