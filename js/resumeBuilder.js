@@ -144,7 +144,7 @@ var education = {
             "name": "GIKI",
             "location": "Topi, Pakistan",
             "degree": ["Pre-Engineering"],
-            "majors": "HSSC",
+            "majors": ["HSSC"],
             "dates": "2010 - 2012",
             "url": "http://www.giki.edu.pk/"
         }
